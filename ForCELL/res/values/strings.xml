@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <string name="app_name">ForCELL</string>
+
+<string name="app_descrip">ForCELL tiene como objetivo mantenerte comunicado en todo momento sin importar donde este su dispositivo móvil.</string>
+<string name="app_credits">© 2010, Leonardo Nouel y Marino Perez.</string>
+
+<string name="app_version">ForCELL v0.1 Alpha</string>
+<string name="set_preferences">Preferences</string>
+</resources>

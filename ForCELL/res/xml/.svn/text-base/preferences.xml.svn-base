@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+        <PreferenceCategory
+                android:title="Main">
+                <ListPreference
+                        android:title="Connectivity"
+                        android:summary="Choose the way to communicate"
+                        android:key="commPref"
+                        android:defaultValue="none"
+                        android:entries="@array/listArray"
+                        android:entryValues="@array/listValues" />
+                <PreferenceScreen
+                android:key="sipPref"
+                android:title="SIP Account"
+                android:summary="Basic's settings of your SIP">
+                <EditTextPreference
+                        android:name="SIP USERNAME"
+                        android:summary="The Username of the SIP Account"
+                        android:title="Username"
+                        android:key="sipUser" />
+                <EditTextPreference
+                        android:name="SIP PASSWORD"
+                        android:summary="The Password of the SIP Username"
+                        android:title="Password"
+                        android:key="sipPass" />
+                <EditTextPreference
+                        android:name="SIP SERVER"
+                        android:summary="The SIP Server ip/host address"
+                        android:title="Server"
+                        android:key="sipServer" />
+                <EditTextPreference
+                        android:name="SIP PORT"
+                        android:summary="The SIP Server Port"
+                        android:title="Port"
+                        android:key="sipPort" />
+                <EditTextPreference
+                        android:name="SIP PROTOCOL"
+                        android:summary="The SIP Server protocol"
+                        android:title="Protocol"
+                        android:key="sipProt" />
+                </PreferenceScreen>
+                <CheckBoxPreference
+                        android:title="Enable optional"
+                        android:defaultValue="true"
+                        android:summary="To enable the Optional Category"
+                        android:key="opPref"
+                        android:disableDependentsState="true"/>
+                                                
+        </PreferenceCategory>
+        <PreferenceCategory
+                android:title="Optional"
+                >
+        <Preference
+                android:title="Any Problem?"
+                android:summary="Report it"
+                android:key="anyPref"
+                android:dependency="opPref"/>
+                
+        </PreferenceCategory>
+</PreferenceScreen>
